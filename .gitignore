@@ -1,0 +1,16 @@
+# Config files with passwords/keys live only on the servers
+**/dbconfig.php
+**/waec_dbconfig.php
+**/sms_config.php
+**/config.php
+**/configs/pmn_provider.php
+# Server junk
+error_log
+**/error_log
+*.zip
+*.sql
+*.sql.gz
+*.tgz
+logs/
+*.log
+error_log*

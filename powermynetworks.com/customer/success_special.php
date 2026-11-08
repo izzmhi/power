@@ -1,0 +1,278 @@
+<?php
+session_start();
+ini_set('display_errors', 1);
+ini_set('display_startup_errors', 1);
+error_reporting(E_ALL);
+
+if (!isset($_GET['telephone'])) {
+    header('Location: auth/login3');
+    exit();
+}
+
+?>
+
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="">
+        <meta name="author" content="">
+        <title>HOME | CodeCraftNetwork</title>
+        <link href="../assets/img/code.png" rel="icon">
+        <link href="../assets/img/code.png" rel="apple-touch-icon">
+        <!-- CSS FILES -->        
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700&family=Open+Sans&display=swap" rel="stylesheet">
+        <link href="css/bootstrap.min.css" rel="stylesheet">
+        <link href="css/bootstrap-icons.css" rel="stylesheet">
+        <link href="css/templatemo-topic-listing.css" rel="stylesheet">
+        	<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css'>   
+    </head>
+    
+    <body class="topics-listing-page" id="top">
+    <main>
+
+     <nav class="navbar navbar-expand-lg">
+        <div class="container">
+            <a href="../index.php" class="logo d-flex align-items-center"> <img src="../assets/img/code.png" style="width:60px;" alt=""> <span>CodeCraftNetwork</span> </a>
+ 
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarNav">
+                        <ul class="navbar-nav ms-lg-5 me-lg-auto">
+                            <li class="nav-item"> <a class="nav-link click-scroll" href="index.php">Home</a> </li>
+                            <li class="nav-item"> <a class="nav-link click-scroll" href="success.php"> Check MTN Status <i class="fa fa-check-circle" aria-hidden="true"></i></a> </li>
+                            <li class="nav-item"> <a class="nav-link click-scroll" href="success1.php"> Check AT/TELECEL Status <i class="fa fa-check-circle" aria-hidden="true"></i></a> </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+            
+            <header class="site-header " style="height: 50px;">
+                <div class="container " style="height: 10px;">
+                    <div class="row align-items-center">
+                        <div class="col-lg-5 col-12">
+                            <h4 class="text-white mb-5" >Order Status</h4>
+                        </div>
+                    </div>
+                </div>
+            </header>
+            
+            
+    <section class="section-padding section-bg">
+        <div class="container">
+                    
+            <div  class="row" style="margin-top:-40px;">
+                                
+        <div class="col-xl-12 col-lg-12 col-md-12 mx-auto">
+            <div class="card z-index-0 px-3 py-2">
+                        <h3 data-aos="fade-up">ORDER INFO</h3>
+                        
+                <?php
+                    if(isset($_GET['success'])){
+                            ?>
+                            <div class="bg-success text-white"><?php echo $_GET['success'] ?></div>
+                            <?php
+                    }
+                        else if(isset($_GET['error'])){
+                            ?>
+                            <div class="bg-danger text-white"><?php echo $_GET['error']; ?></div>
+                            <?php
+                    }
+                ?>
+
+   <?php
+include '../database/dbconfig.php';
+
+if (isset($_GET['telephone'])) {
+    $recipient_number = $_GET['telephone'];
+
+    // Use prepared statements for SQL queries
+    $stmt = $con->prepare("SELECT * FROM special_offers_orders WHERE beneficiary = ? ORDER BY id DESC LIMIT 1");
+    $stmt->bind_param("s", $recipient_number);
+    $stmt->execute();
+    $result = $stmt->get_result();
+    
+    // Check if any rows are returned
+    if ($result->num_rows > 0) {
+        while ($row = $result->fetch_assoc()) {
+            ?>
+            <div class='mb-3'><?php echo htmlspecialchars($row['network']) . " " . htmlspecialchars($row['gig']) ?> GB</div>
+            <div class='mb-3'>GHS <?php echo htmlspecialchars($row['price']) ?></div>
+            <div class='mb-3'><?php echo htmlspecialchars($row['beneficiary']) ?></div>
+            <small class='mb-3'><?php echo htmlspecialchars($row['order_date']) . "-" . htmlspecialchars($row['order_time']) ?></small>
+            <?php
+            // Display order status
+            if ($row['order_status'] == "Pending") {
+                echo "<h4>Order is Pending.......</h4>";
+            } elseif ($row['order_status'] == "Cancelled") {
+                echo "<h4>Your Order is cancelled. Admin will refund your money.</h4>";
+            } else {
+                echo "<h4>Order is Delivered.</h4>";
+            }
+            ?>
+            <?php
+        }
+    } else {
+        // If no order is found
+        echo "<div>No orders found for this telephone number.</div>";
+    }
+
+    // Close the statement
+    $stmt->close();
+} else {
+    // Display error message if the telephone parameter is not provided
+    echo "<div>Recipient Telephone is required.</div>";
+}
+
+// Close the database connection
+$con->close();
+?>
+
+
+
+            </div>
+          </div>
+
+ <br>
+ <hr>
+ <br>
+ 
+   <style>
+    .whatsapp-icon {
+        position: fixed;
+        bottom: 20px;
+        left: 20px;
+        z-index: 1000;
+        cursor: pointer;
+    }
+    </style>
+
+        <a href="https://wa.me/233208707376" target="_blank" class="whatsapp-icon">
+         <img src="../assets/img/WhatsApp.png" alt="WhatsApp" style="width: 50px; height: 50px;">
+          </a>
+
+                    <div class="row mt-4">
+                        <div class="col-lg-12 col-12">
+                            
+                            <div id="accordion">
+  <div class="card">
+    <div class="card-header" id="headingOne">
+      <h5 class="mb-0">
+        <button class="btn btn-link" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+          HOW IT WORKS
+        </button>
+      </h5>
+    </div>
+    <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion">
+      <div class="card-body">
+          <p>1. Browse Packages: Visit our website and explore the available data packages from MTN, Telecel, and AirtelTigo Ghana.</p>
+          <p>2. Select Your Plan: Choose the data package that best suits your needs and budget.</p>
+          <p>3. Make a Payment: Securely pay using your preferred payment method.</p>
+   
+</div>
+    </div>
+  </div>
+  <div class="card">
+    <div class="card-header" id="headingTwo">
+      <h5 class="mb-0">
+        <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+          IMPORTANT NOTICE
+        </button>
+      </h5>
+    </div>
+    <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
+      <div class="card-body">
+                 <p>   Our MTN Data Package Does not support the following</p>
+          <p>1. Other Network.</p>
+          <p>2. Merchant SIM.</p>
+          <p>3. EVD SIM.</p>
+          <p>4. Turbonet SIMS.</p>
+    <p>4. Broadband SIMS.</p>
+<p>5. Blacklisted SIM.</p>
+<p>* Sometimes a customer will not receive the SMS alert but the data is sent.</p>
+<p>* Always check total data balance.</p>
+
+      </div>
+    </div>
+  </div>
+</div>
+
+     <div class="row mt-5">
+          <div class="col-lg-2 col-sm-4 col-3">
+               <div class="card z-index-0 px-3 py-2">
+               <img src="../assets/img/MTN.png" class="img-fluid" alt="MTN Logo">
+            </div>
+          </div>
+          <div class="col-lg-2 col-sm-4 col-3">
+               <div class="card z-index-0 px-3 py-2">
+               <img src="../assets/img/Telecel.jpg" class="img-fluid" alt="TELECEL Logo">
+            </div>
+          </div>
+          <div class="col-lg-2 col-sm-4 col-3">
+               <div class="card z-index-0 px-3 py-2">
+               <img src="../assets/img/AT.jpg" class="img-fluid" alt="MTN Logo">
+            </div>
+          </div>
+          <div class="col-lg-2 col-sm-4 col-3">
+               <div class="card z-index-0 px-3 py-2">
+               <img src="../assets/img/mastercard.jpg" class="img-fluid" alt="MTN Logo">
+            </div>
+          </div>
+          <div class="col-lg-2 col-sm-4 col-3">
+               <div class="card z-index-0 px-3 py-2">
+               <img src="../assets/img/Visa.jpg" class="img-fluid" alt="MTN Logo">
+            </div>
+          </div>
+          <div class="col-lg-2 col-sm-4 col-3">
+               <div class="card z-index-0 px-3 py-2">
+               <img src="../assets/img/paystack.png" class="img-fluid" alt="MTN Logo">
+            </div>
+          </div>
+      </div>
+                            
+</div>
+
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer class="site-footer section-padding">
+            <div class="container">
+                <div class="row">
+
+                    <div class="col-lg-3 col-md-4 col-6 mb-4 mb-lg-0">
+                        <h6 class="site-footer-title mb-3">Information</h6>
+                        <p class="text-white d-flex mb-1">
+                            <a href="tel: +233208707376" class="site-footer-link">
+                                +233208707376
+                            </a>
+                        </p>
+                        <p class="text-white d-flex">
+                            <a href="mailto:codecraftnetwork1@gmail.com" class="site-footer-link">
+                                codecraftnetwork1@gmail.com
+                            </a>
+                        </p>
+                    </div>
+
+                </div>
+            </div>
+        </footer>
+        
+          <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+          
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+        <!-- JAVASCRIPT FILES -->
+        <script src="js/jquery.min.js"></script>
+        <script src="js/bootstrap.bundle.min.js"></script>
+        <script src="js/jquery.sticky.js"></script>
+        <script src="js/custom.js"></script>
+
+    </body>
+</html>
