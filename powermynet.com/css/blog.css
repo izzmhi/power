@@ -1,0 +1,248 @@
+/*
+Template Name: Gaming
+File: Layout CSS
+Author: TemplatesOnWeb
+Author URI: https://www.templateonweb.com/
+Licence: <a href="https://www.templateonweb.com/license">Website Template Licence</a>
+*/
+/*********************blog****************/
+#blog{
+padding-top:40px;
+padding-bottom:40px; 
+ }
+.blog_1l .feature_1ib ul li {
+display: inline-block;
+margin-right: 20px;
+}
+.feature_1ib ul li a{
+font-weight:normal!important;
+}
+.blog_1l .feature_1ib ul li i {
+margin-right: 5px;
+}
+.feature_1ib hr{
+border-color:#333;
+}
+.blog_1l{
+margin-top:30px; 
+ }
+ 
+.blog_1r1 .input-group {
+border:none;
+background: #191c23;
+}
+.blog_1r1 .form-control {
+height: 50px;
+border: none;
+box-shadow: none;
+background: none;
+font-size: 18px;
+color:#999;
+}
+.blog_1r1 .btn {
+background: none;
+border: none;
+box-shadow: none;
+color: #999;
+font-size: 18px;
+}
+
+.blog_1r2{
+margin-top:25px; 
+margin-bottom:25px; 
+ }
+.blog_1r2 ul li a{
+border-radius:0;
+background:#222;
+width:30px;
+height:30px;
+font-size:14px;
+ }
+.blog_1r2 ul li a i{
+line-height:30px;
+ }
+.blog_1r3{
+background: #191c23;
+padding:30px 15px;
+margin-bottom:25px;
+ }
+.blog_1r3 h6 {
+border-bottom: 1px solid #333;
+padding-bottom: 15px;
+font-weight:normal;
+}
+.blog_1r4{
+background: #191c23;
+padding:30px 15px;
+margin-bottom:25px;
+ }
+.blog_1r4i h6 i{
+vertical-align:middle;
+margin-right:5px; 
+ }
+.blog_1r4i img{
+float:left;
+margin-right:10px; 
+ }
+.blog_1r4i h6{
+margin-top:8px;
+ }
+.blog_1r4i{
+border-bottom: 1px solid #333;
+padding-bottom: 15px;
+margin-top:15px;
+ }
+.blog_1r5{
+background: #191c23;
+padding:30px 15px;
+margin-bottom:25px;
+ }
+.blog_1r5 ul li{
+display:inline-block;
+margin-bottom:5px;
+ }
+.blog_1r5 ul li a{
+background:#333;
+padding:10px;
+display:block;
+ }
+.blog_1r5 ul li a:hover{
+background:#ff5917;
+color:#fff;
+ }
+.blog_1r6 p {
+border-bottom: 1px solid #333;
+padding-bottom: 15px;
+font-size:16px;
+}
+.blog_1r6{
+background: #191c23;
+padding:30px 15px;
+ }
+ 
+.blog_1lb{
+background: #191c23;
+padding:20px; 
+ }
+.blog_1lb blockquote {
+margin-bottom: 0;
+border-color: #333;
+padding: 30px;
+}
+.blog_1lb .nav_n {
+list-style: disc;
+margin-left: 20px;
+margin-right: 20px;
+}
+.blog_1lb .nav_n li {
+margin-top: 5px;
+}
+.blog_1lb .nav_n1 li {
+display: inline-block;
+margin-right: 10px;
+}
+.blog_1lb ul li a {
+padding: 10px 15px 10px 15px;
+background: #333;
+border-radius: 30px;
+display: block;
+font-size: 16px;
+}
+
+.blog_detail_l2{
+padding:20px;
+background: #191c23;
+ }
+.blog_detail_l2i1 h4 a{
+font-size:16px; 
+ }
+.blog_detail_l2i1{
+margin-top:30px; 
+border-bottom:1px solid #333;
+padding-bottom:30px; 
+ }
+.blog_1ln .form-control{
+width:70%; 
+ }
+.blog_1ln .form_1{
+width:100%; 
+ }
+.blog_1ln{
+padding:20px;
+background: #191c23;
+ }
+.contact_1r .form-control{
+height:50px;
+margin-bottom:20px;
+border:none;
+background:#333;
+box-shadow:none;
+font-size:18px;
+color:#999;
+ }
+.contact_1r .form_1{
+height:150px; 
+ }
+/*********************blog_end****************/
+
+
+@media screen and (max-width : 767px){
+.blog_1l1 .nav_n {
+list-style:none;
+margin-left:0;
+margin-right:0;
+ }
+.blog_1l1 .nav_n1 li {
+margin-top:5px;
+margin-left:5px;
+margin-right:5px;
+ }
+.blog_1ln .form-control {
+margin-left:auto;
+margin-right:auto;
+}
+
+#blog{
+text-align:center; 
+ }
+.blog_1r {
+margin-top:15px; 
+ }
+.blog_1r4i {
+text-align:left; 
+ }
+.blog_1lb ul li {
+margin-bottom:8px; 
+ }
+.blog_detail_l2i1  .pull-right{
+float:none!important;
+margin-left:10px; 
+ }
+.blog_detail_l2i1  img{
+margin-bottom:15px;
+ }
+.blog_1lb .nav_n {
+list-style: none;
+margin-left:0;
+margin-right:0;
+}
+}
+
+@media (min-width:768px) and (max-width:991px) {
+.blog_1r2 ul li{
+margin-bottom:5px; 
+ }
+.blog_1r4i img {
+float: none;
+margin-right:0;
+margin-bottom:10px;
+}
+ }
+@media (min-width:992px) and (max-width:1200px) {
+.blog_1r2 ul li{
+margin-bottom:5px; 
+ }
+  }
+@media (min-width:1201px) and (max-width:1340px) {
+
+ }

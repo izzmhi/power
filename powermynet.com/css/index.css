@@ -1,0 +1,371 @@
+/*
+Template Name: Gaming
+File: Layout CSS
+Author: TemplatesOnWeb
+Author URI: https://www.templateonweb.com/
+Licence: <a href="https://www.templateonweb.com/license">Website Template Licence</a>
+*/
+/*********************center_home****************/
+.carousel-caption {
+background: #0006;
+width:50%;
+left:25%;
+bottom:0;
+padding-left:10px;
+padding-right:10px;
+}
+.carousel-fade .carousel-inner .item {
+opacity: 0;
+-webkit-transition-property: opacity;
+-moz-transition-property: opacity;
+-o-transition-property: opacity;
+transition-property: opacity;
+}
+.carousel-fade .carousel-inner .active { opacity: 1 }
+.carousel-fade .carousel-inner .active.left,
+.carousel-fade .carousel-inner .active.right {
+left: 0;
+opacity: 0;
+z-index: 1;
+}
+.carousel-fade .carousel-inner .next.left,
+.carousel-fade .carousel-inner .prev.right { opacity: 1 }
+.carousel-fade .carousel-control { z-index: 11 }
+@media only screen and (max-width:767px) { 
+.carousel-caption {
+padding: 15px;
+}
+.carousel { margin-bottom: 0 }
+.hero-unit { padding-bottom: 60px }
+.hero-unit p { font-size: 16px }
+
+}
+
+.kb_control_left,.kb_control_left:hover,.kb_control_left:active,.kb_control_left:focus,.kb_control_right,.kb_control_right:hover,.kb_control_right:active,.kb_control_right:focus{
+color:#ff5917;
+background:#fff !important;
+}  
+.kb_control_left,.kb_control_right{
+top:46%;
+z-index:2;
+width:55px;
+height:55px;
+text-align:center;
+-webkit-transition:all ease-in-out .3s;
+transition:all ease-in-out .3s
+}
+.kb_wrapper:hover .kb_control_left,.kb_wrapper:hover .kb_control_right{
+opacity:1;
+}
+.kb_icons{
+line-height:50px !important;
+font-size:34px!important;
+font-weight:normal!important;
+}
+.kb_control_left{
+left:1%!important
+}
+.kb_control_right{
+right:1%!important
+}
+.center_home .carousel-control{
+opacity:1;
+}
+/*********************center_home_end****************/
+
+/*********************spec****************/
+#spec{
+padding-top:40px; 
+padding-bottom:40px;
+ }
+.spec_1{
+margin-bottom:30px; 
+ }
+.spec_1 h3 i{
+margin-right:5px;
+vertical-align:middle;
+ }
+.spec_2i span{
+display:inline-block;
+font-size:60px;
+float:left;
+line-height:0;
+margin-right:20px; 
+ }
+.spec_2{
+background:#191c23; 
+margin-left:15px;
+margin-right:15px;
+padding:25px 40px 40px 40px;
+ }
+.spec_3{
+margin-top:40px;
+ }
+.spec_3l{
+background:#191c23; 
+padding:30px 20px 30px 20px;
+ }
+/*********************spec_end****************/
+
+/*********************popular****************/
+#popular{
+padding-bottom:40px; 
+ }
+.popular_1i2 h4 i{
+display:inline-block;
+background:#191c23;
+width:50px;
+height:50px;
+line-height:50px;
+text-align:center;
+margin-right:5px;
+border-radius:50%;
+font-size:16px;
+color:#ff5917; 
+ }
+.popular_1i2 h4 i:hover{
+background:#ff5917;
+color:#fff; 
+ }
+.popular_1i3 .span_1 i{
+display:inline-block;
+background:#fff;
+width:50px;
+height:50px;
+line-height:50px;
+text-align:center;
+margin-right:5px;
+border-radius:50%;
+font-size:16px;
+color:#ff5917; 
+ }
+.popular_1i3 .span_1 i:hover{
+background:#ff5917;
+color:#fff; 
+ }
+.popular_1i{
+position:relative; 
+ }
+.popular_1i3{
+position:absolute;
+width:100%;
+height:100%;
+background:#191c2373;
+top:0; 
+padding-top:80px;
+display:none;
+ }
+.popular_1i:hover .popular_1i3{
+display:block;
+ }
+.popular_1{
+margin-top:30px; 
+ }
+/*********************popular_end****************/
+
+/*********************feature****************/
+#feature{
+background:#222;
+padding-top:40px;
+padding-bottom:40px; 
+ }
+.feature_1i2 h5 a{
+display:inline-block;
+background:#ff5917;
+padding:8px 20px;
+ }
+.feature_1i{
+position:relative;
+ }
+.feature_1i2{
+position:absolute;
+bottom:0;
+padding-left:20px;
+ }
+.feature_1ib{
+background:#191c23; 
+padding:20px; 
+ }
+/*********************feature_end****************/
+
+/*********************trend****************/
+#trend{
+padding-top:40px;
+padding-bottom:40px; 
+ }
+#gallery{
+background:#191c23; 
+ }
+.prod_h2i2 span a{
+background:#ff5917;
+color:#fff;
+display:inline-block;
+width:50px;
+height:50px;
+line-height:50px;
+border-radius:50%;
+color:#fff;
+font-size:16px; 
+ }
+.prod_h2i{
+position:relative; 
+ }
+.prod_h2i2{
+position:absolute;
+width:100%;
+top:70px;
+display:none;
+ }
+.prod_h2i3{
+position:absolute; 
+width:100%;
+background:#191c23;
+bottom:0;
+padding:15px;
+display:none;
+ }
+.prod_h2i:hover .prod_h2i2{
+display:block; 
+ }
+.prod_h2i:hover .prod_h2i3{
+display:block; 
+ }
+ 
+.prod_h3 h5{
+display:inline-block;
+margin-left:5px;
+margin-right:5px;
+ }
+.prod_h3{
+margin-top:15px; 
+ }
+/*********************trend_end****************/
+
+/*********************offer****************/
+#offer{
+padding-top:40px;
+padding-bottom:40px; 
+ }
+.offer_1i{
+background:#111;
+padding:20px 15px; 
+border-bottom:5px solid #ff5917;
+ }
+.offer_1i1r span{
+display:inline-block;
+margin-top:10px; 
+ }
+.offer_1i1r h4{
+margin-top:10px; 
+ }
+.offer_1i1{
+padding:20px 15px; 
+background:#191c23;
+border-bottom:1px solid #2b2f3a;
+ }
+/*********************offer_end****************/
+
+@media screen and (max-width : 767px){
+.center_home {
+text-align:center; 
+ }
+.center_home img{
+min-height:300px; 
+ }
+.carousel-caption{
+position:static;
+width:100%;
+ }
+.carousel-caption br{
+display:none;
+ }
+.kb_control_left, .kb_control_right {
+top: 17%!important;
+}
+#spec{
+text-align:center; 
+ }
+.spec_2i span {
+float: none;
+margin-right:0;
+}
+.spec_3l{
+margin-top:10px; 
+ }
+.spec_3lr{
+margin-top:10px; 
+ }
+#popular{
+text-align:center; 
+ }
+.popular_1i{
+margin-top:10px; 
+ }
+#feature{
+text-align:center; 
+ }
+.feature_1i{
+margin-top:10px; 
+ }
+#trend{
+text-align:center; 
+ }
+.trend_1r{
+margin-top:10px;  
+ }
+#offer{
+text-align:center; 
+ }
+.offer_1i{
+margin-top:10px;  
+ }
+.offer_1i1r{
+margin-top:10px; 
+ }
+}
+
+@media (min-width:768px) and (max-width:991px) {
+.carousel-caption {
+width: 80%;
+left: 10%;
+}
+.carousel-caption br{
+display:none;
+}
+.spec_2i span {
+float: none;
+margin-right:0;
+}
+.popular_1i2 h4{
+font-size:16px; 
+ }
+.trend_1r img{
+min-height:400px; 
+ }
+.prod_h2i1  img{
+min-height:260px; 
+ }
+.offer_1i  h4{
+font-size:20px; 
+ }
+ }
+@media (min-width:992px) and (max-width:1200px) {
+.carousel-caption br{
+display:none;
+}
+.spec_2i span {
+float: none;
+margin-right:0;
+}
+.trend_1r img{
+min-height:400px; 
+ }
+.prod_h2i1  img{
+min-height:260px; 
+ }
+  }
+@media (min-width:1201px) and (max-width:1340px) {
+.carousel-caption br{
+display:none;
+}
+ }

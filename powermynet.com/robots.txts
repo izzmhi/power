@@ -1,0 +1,44 @@
+User-agent: *
+Disallow: /waec_dbconfig.php
+Disallow: /success.php
+Disallow: /sms_config.php
+Disallow: /shop.html
+Disallow: /register.html
+Disallow: /payments_wassce.php
+Disallow: /payments_bece.php
+Disallow: /pay_wassce.php
+Disallow: /pay_bece.php
+Disallow: /pay.php
+Disallow: /login.html
+Disallow: /get_price.php
+Disallow: /error_log
+Disallow: /detail.html
+Disallow: /data_index.php
+Disallow: /contact.html
+Disallow: /checkout.html
+Disallow: /cart.html
+Disallow: /blog_detail.html
+Disallow: /blog.html
+Disallow: /api_test_mtn.php
+Disallow: /api_test.php
+Disallow: /about.html
+
+# Block folders
+Disallow: /api/
+Disallow: /configs/
+Disallow: /customer/
+Disallow: /database/
+Disallow: /dummy_shop/
+Disallow: /fonts/
+Disallow: /my/
+Disallow: /myadmin/
+Disallow: /parts/
+Disallow: /pmnetshop/
+Disallow: /results/
+Disallow: /site/
+Disallow: /vendor/
+
+# Allow main site
+Allow: /
+
+Sitemap: https://www.powermynetworks.com/sitemap.xml

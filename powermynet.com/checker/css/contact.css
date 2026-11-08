@@ -1,0 +1,80 @@
+/*
+Template Name: Gaming
+File: Layout CSS
+Author: TemplatesOnWeb
+Author URI: https://www.templateonweb.com/
+Licence: <a href="https://www.templateonweb.com/license">Website Template Licence</a>
+*/
+/*********************contact*************/
+#contact{
+padding-top:40px;
+padding-bottom:40px;  
+  }
+.contact_1m p i{
+margin-right:5px; 
+ }
+.contact_1m ul li a {
+ background:#ff5917;
+ border-radius:0;
+}
+
+.blog_1ln .form-control{
+width:70%; 
+ }
+.blog_1ln .form_1{
+width:100%; 
+ }
+.blog_1ln{
+padding:30px 15px;
+box-shadow: 0 0 5px #191c23;
+margin-top:30px;
+margin-left:15px;
+margin-right:15px; 
+ }
+.contact_1r .form-control{
+height:50px;
+margin-bottom:20px;
+border:none;
+background:#111; 
+box-shadow:none;
+font-size:18px;
+border-bottom:3px solid #ff5917;
+ }
+.contact_1r .form_1{
+height:150px; 
+ }
+
+/*********************contact_end****************/
+
+@media screen and (max-width : 767px){
+#contact{
+text-align:center; 
+ }
+.contact_1m {
+margin-top:15px;
+margin-bottom:15px; 
+ }
+.contact_1m hr{
+margin-left:auto;
+ }
+.contact_1r .form-control{
+margin-left:auto;
+margin-right:auto; 
+ }
+}
+
+@media (min-width:768px) and (max-width:991px) {
+.contact_1m ul li{
+margin-bottom:5px; 
+ }
+ }
+@media (min-width:992px) and (max-width:1200px) {
+
+ }
+@media (min-width:1201px) and (max-width:1340px) {
+
+ }
+
+
+
+

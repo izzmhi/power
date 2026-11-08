@@ -1,0 +1,76 @@
+/*
+Template Name: Gaming
+File: Layout CSS
+Author: TemplatesOnWeb
+Author URI: https://www.templateonweb.com/
+Licence: <a href="https://www.templateonweb.com/license">Website Template Licence</a>
+*/
+/*********************register****************/
+#register{
+ padding-top:40px;
+ padding-bottom:40px; 
+  }
+.register_1li h4{
+margin-top:15px;
+  }
+.register_1li1l{
+margin-top:10px;  
+  }
+.register_1li1l .form-control{
+ margin-top:10px;
+ border-radius:0;
+ font-size:18px;
+ }
+.register_1li1l .button_1{
+ float:left;
+ margin-right:10px; 
+  }
+.register_1li1l .tick_box{
+display:inline-block;
+margin-top:20px;  
+  }
+.check{
+vertical-align:text-top;
+  }
+.register_1li1l h6{
+clear:left;
+margin-top:30px;  
+  }
+
+.register_1li2{
+margin-top:10px;  
+  }
+.register_1li2 p span{
+ margin-left:10px;
+ }
+.term{
+ margin-top:15px;
+ line-height:1.6em;
+ }
+.login_page{
+  margin-top:15px;
+  }
+.c_text{
+  color:#ff5917;
+  }
+/*********************register_end****************/
+
+
+@media screen and (max-width : 767px){
+#register{
+ text-align:center;
+  }
+.register_1r {
+margin-top:15px; 
+ }
+}
+
+@media (min-width:768px) and (max-width:991px) {
+
+ }
+@media (min-width:992px) and (max-width:1200px) {
+
+  }
+@media (min-width:1201px) and (max-width:1340px) {
+
+ }

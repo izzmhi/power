@@ -1,0 +1,143 @@
+/*
+Template Name: Gaming
+File: Layout CSS
+Author: TemplatesOnWeb
+Author URI: https://www.templateonweb.com/
+Licence: <a href="https://www.templateonweb.com/license">Website Template Licence</a>
+*/
+/*********************cart****************/
+.cart{
+padding-top:40px;
+padding-bottom:40px; 
+ }
+.cart_2{
+ margin-top:10px;
+ }
+.cart_2 h5{
+ margin-top:15px;
+ }
+.cart_3{
+margin-top:30px; 
+ }
+.cart_3l h5{
+ background: #191c23; 
+ padding:10px 20px;
+ border-bottom:1px solid #666;
+ }
+.cart_3l1i2{
+margin-top:10px; 
+ }
+.cart_3l1{
+ border-bottom:1px solid #4c4b4b;
+ padding-bottom:20px;
+ margin-top:20px;
+ }
+.cart_3l1i2 .input-group{
+width:23%;
+float:left;
+margin-right:15px;
+ }
+.cart_3l1i2 .input-group .form-control{
+border-color:#eee;
+box-shadow:none;
+ }
+.cart_3l1i2 .input-group .btn{
+border-color:#eee;
+ }
+.cart_3l1i2 h6{
+display:inline-block;
+margin-right:13px;
+font-weight:bold;
+ }
+.cart_3l1i2 .button{
+ padding-top:8px!important;
+ padding-bottom:8px!important;
+ }
+.cart_3l1i2 .button_1{
+ padding-top:8px!important;
+ padding-bottom:8px!important;
+ }
+
+.cart_3r .head_1{
+ background: #191c23; 
+ padding:10px 20px;
+ border-bottom:1px solid #666;
+ text-align:center;
+ }
+.cart_3r .form-control{
+margin-top:15px;
+height:110px;
+border-color:#eee; 
+box-shadow:none;
+font-size:18px; 
+ }
+.cart_3r1 .form-control{
+margin-top:10px; 
+border-color:#eee; 
+box-shadow:none;
+font-size:18px; 
+ }
+.cart hr{
+border-color:#4c4b4b; 
+ }
+/*********************cart_end****************/
+
+
+@media screen and (max-width : 767px){
+.cart{
+text-align:center; 
+ }
+.cart_2 h5{
+text-align:center;  
+ }
+.cart_3l1i1{
+margin-top:10px; 
+ }
+.cart_3l1i2 .input-group{
+ width:50%;
+margin:auto;
+float:none;
+margin-top:10px;
+ }
+.cart_3l1i2 h6{
+ margin-right:0;
+ margin-top:10px!important;
+ margin-bottom:5px;
+ }
+
+}
+
+@media (min-width:768px) and (max-width:991px) {
+.cart_3l1i2 .input-group{
+ width:38%;
+ margin-right:8px;
+ }
+.cart_3l1i2 .button{
+padding:10px 7px!important; 
+ }
+.cart_3l1i2 .button_1{
+padding:10px 7px!important; 
+ }
+.cart_3l1i2 h6{
+margin-right:5px;
+font-size:12px; 
+ }
+.cart_3l1i  img{
+min-height:210px; 
+ }
+ }
+@media (min-width:992px) and (max-width:1200px) {
+.cart_3l1i2 .input-group{
+ width:28%;
+ margin-right:8px;
+ }
+.cart_3l1i2 h6{
+margin-right:8px;
+ }
+.cart_3l1i  img{
+min-height:210px; 
+ }
+  }
+@media (min-width:1201px) and (max-width:1340px) {
+
+ }
