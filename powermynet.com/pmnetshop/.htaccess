@@ -1,0 +1,34 @@
+RewriteEngine On
+# If the request is a real file or folder, do nothing
+RewriteCond %{REQUEST_FILENAME} -f [OR]
+RewriteCond %{REQUEST_FILENAME} -d
+RewriteRule ^ - [L]
+# Homepage: /my/owusu → index.php?shop=owusu
+RewriteRule ^([^/]+)/?$ index.php?shop=$1 [L,QSA]
+# Pay pages: /my/owusu/pay.php → pay.php?shop=owusu
+RewriteRule ^([^/]+)/pay\.php$ pay.php?shop=$1 [L,QSA]
+RewriteRule ^([^/]+)/pay_at\.php$ pay_at.php?shop=$1 [L,QSA]
+RewriteRule ^([^/]+)/pay_afa\.php$ pay_afa.php?shop=$1 [L,QSA]
+RewriteRule ^([^/]+)/pay_special\.php$ pay_special.php?shop=$1 [L,QSA]
+RewriteRule ^([^/]+)/pay_telecel\.php$ pay_telecel.php?shop=$1 [L,QSA]
+RewriteRule ^([^/]+)/pay_mtn_big\.php$ pay_mtn_big.php?shop=$1 [L,QSA]
+# Login & Order
+RewriteRule ^([^/]+)/check\.php$ check.php?shop=$1 [L,QSA]
+RewriteRule ^([^/]+)/reorder\.php$ reorder.php?shop=$1 [L,QSA]
+RewriteRule ^([^/]+)/process\.php$ process.php?shop=$1 [L,QSA]
+# Success page
+RewriteRule ^([^/]+)/success\.php$ success.php?shop=$1 [L,QSA]
+
+RewriteRule ^([^/]+)/order_at\.php$ order_at.php?shop=$1 [L,QSA]
+RewriteRule ^([^/]+)/order_mtn\.php$ order_mtn.php?shop=$1 [L,QSA]
+RewriteRule ^([^/]+)/order_telecel\.php$ order_telecel.php?shop=$1 [L,QSA]
+RewriteRule ^([^/]+)/order_afa\.php$ order_afa.php?shop=$1 [L,QSA]
+RewriteRule ^([^/]+)/order_atbig\.php$ order_atbig.php?shop=$1 [L,QSA]
+RewriteRule ^([^/]+)/order_mtnbig\.php$ order_mtnbig.php?shop=$1 [L,QSA]
+
+RewriteRule ^([^/]+)/payments_mtn\.php$ payments_mtn.php?shop=$1 [L,QSA]
+RewriteRule ^([^/]+)/payments_at\.php$ payments_at.php?shop=$1 [L,QSA]
+RewriteRule ^([^/]+)/payments_telecel\.php$ payments_telecel.php?shop=$1 [L,QSA]
+RewriteRule ^([^/]+)/payments_afa\.php$ payments_afa.php?shop=$1 [L,QSA]
+RewriteRule ^([^/]+)/payments_atbig\.php$ payments_atbig.php?shop=$1 [L,QSA]
+RewriteRule ^([^/]+)/payments_mtnbig\.php$ payments_mtnbig.php?shop=$1 [L,QSA]
