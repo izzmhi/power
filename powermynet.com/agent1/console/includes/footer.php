@@ -1,0 +1,1 @@
+ <footer id="footer" class="footer"> <div class="copyright"> &copy; Copyright . All Rights Reserved </div> </footer>
